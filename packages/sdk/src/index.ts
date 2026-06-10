@@ -13,9 +13,19 @@
 
 import { EventProps } from './types';
 
-export class Upstream {
-    private apiKey: string | null = null;
-    private host: string = 'https://up.linus.my';
+export class UpstreamClient {
+    private apiKey: string;
+    private host: string;
+
+    constructor(hostOrApiKey: string, apiKey?: string) {
+        if (apiKey) {
+            this.host = hostOrApiKey;
+            this.apiKey = apiKey;
+        } else {
+            this.host = 'https://up.linus.my';
+            this.apiKey = hostOrApiKey;
+        }
+    }
 
     public events = {
         ingest: async (payload: EventProps | EventProps[]) => {
@@ -23,30 +33,23 @@ export class Upstream {
                 throw new Error('API key has not been configured');
             }
 
-            // If it's a single object, wrap it in an array.
-            // If it's already an array, keep it as is.
             const events = Array.isArray(payload) ? payload : [payload];
 
-            try {
-                // TODO: Implement API call to ingest endpoint
-                return true;
-            } catch (error) {
-                return false;
-            }
-        }
-    }
-
-    public init(apiKey: string): void;
-    public init(host: string, apiKey: string): void;
-    public init(hostOrApiKey: string, apiKey?: string): void {
-        if (apiKey) {
-            this.host = hostOrApiKey;
-            this.apiKey = apiKey;
-        } else {
-            this.apiKey = hostOrApiKey;
+            // TODO: Implement API call to ingest events
+            return true;
         }
     }
 }
 
-export const upstream = new Upstream();
-export default Upstream;
+interface UpstreamFactory {
+    init(apiKey: string): UpstreamClient;
+    init(host: string, apiKey: string): UpstreamClient;
+}
+
+export const upstream: UpstreamFactory = {
+    init(hostOrApiKey: string, apiKey?: string): UpstreamClient {
+        return new UpstreamClient(hostOrApiKey, apiKey);
+    }
+};
+
+export default UpstreamClient;
