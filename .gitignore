@@ -21,3 +21,6 @@ Thumbs.db
 # Misc
 *.tgz
 *.tar.gz
+
+# Turbo
+.turbo/
