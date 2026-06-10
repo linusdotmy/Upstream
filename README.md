@@ -19,7 +19,7 @@ Try it today at https://up.linus.my.
 
 ## Quick Start
 
-1. Go to https://upstream.linus.my and register an API key for your project.
+1. Go to https://up.linus.my and register an API key for your project.
 2. Install ``upstream-sdk`` into your project.
 ```bash
 npm i upstream-sdk

@@ -46,7 +46,7 @@ interface UpstreamFactory {
     init(host: string, apiKey: string): UpstreamClient;
 }
 
-export const upstream: UpstreamFactory = {
+export const Upstream: UpstreamFactory = {
     init(hostOrApiKey: string, apiKey?: string): UpstreamClient {
         return new UpstreamClient(hostOrApiKey, apiKey);
     }
