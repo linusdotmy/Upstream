@@ -42,6 +42,12 @@ up.events.ingest(
 
 And your done! For API documentation, visit our [docs](https://docs.linus.my/upstream).
 
+## Contributing
+
+We currently aren't accepting any outside contributions to Upstream Core (the app). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
+
+Contributions to the main ``upstream-sdk`` or marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md)
+
 ## License
 
 The Upstream Marketing site & SDK are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
