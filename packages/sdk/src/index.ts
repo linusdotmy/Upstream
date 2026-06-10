@@ -1,50 +1,52 @@
-export interface LogEntry {
-  level: "debug" | "info" | "warn" | "error";
-  message: string;
-  timestamp?: string;
-  metadata?: Record<string, unknown>;
+//                                  __
+//                                 |  \
+//  __    __   ______    _______  _| $$_     ______    ______    ______   ______ ____
+// |  \  |  \ /      \  /       \|   $$ \   /      \  /      \  |      \ |      \    \
+// | $$  | $$|  $$$$$$\|  $$$$$$$ \$$$$$$  |  $$$$$$\|  $$$$$$\  \$$$$$$\| $$$$$$\$$$$\
+// | $$  | $$| $$  | $$ \$$    \   | $$ __ | $$   \$$| $$    $$ /      $$| $$ | $$ | $$
+// | $$__/ $$| $$__/ $$ _\$$$$$$\  | $$|  \| $$      | $$$$$$$$|  $$$$$$$| $$ | $$ | $$
+//  \$$    $$| $$    $$|       $$   \$$  $$| $$       \$$     \ \$$    $$| $$ | $$ | $$
+//   \$$$$$$ | $$$$$$$  \$$$$$$$     \$$$$  \$$        \$$$$$$$  \$$$$$$$ \$$  \$$  \$$
+//           | $$
+//           | $$
+//            \$$
+
+import { EventProps } from './types';
+
+export class Upstream {
+    private apiKey: string | null = null;
+    private host: string = 'https://up.linus.my';
+
+    public events = {
+        ingest: async (payload: EventProps | EventProps[]) => {
+            if (!this.apiKey) {
+                throw new Error('API key has not been configured');
+            }
+
+            // If it's a single object, wrap it in an array.
+            // If it's already an array, keep it as is.
+            const events = Array.isArray(payload) ? payload : [payload];
+
+            try {
+                // TODO: Implement API call to ingest endpoint
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+    }
+
+    public init(apiKey: string): void;
+    public init(host: string, apiKey: string): void;
+    public init(hostOrApiKey: string, apiKey?: string): void {
+        if (apiKey) {
+            this.host = hostOrApiKey;
+            this.apiKey = apiKey;
+        } else {
+            this.apiKey = hostOrApiKey;
+        }
+    }
 }
 
-export interface IngestOptions {
-  apiKey?: string;
-  endpoint?: string;
-}
-
-export class UpstreamSDK {
-  private apiKey: string;
-  private endpoint: string;
-
-  constructor(options: IngestOptions = {}) {
-    this.apiKey = options.apiKey || "";
-    this.endpoint = options.endpoint || "https://api.upstream.dev/v1/ingest";
-  }
-
-  async ingest(entry: LogEntry): Promise<void> {
-    const payload = {
-      ...entry,
-      timestamp: entry.timestamp || new Date().toISOString(),
-    };
-
-    console.log("[UpstreamSDK] Ingest request:", {
-      endpoint: this.endpoint,
-      apiKey: this.apiKey ? "***" : undefined,
-      payload,
-    });
-  }
-
-  async ingestBatch(entries: LogEntry[]): Promise<void> {
-    const payload = entries.map((entry) => ({
-      ...entry,
-      timestamp: entry.timestamp || new Date().toISOString(),
-    }));
-
-    console.log("[UpstreamSDK] Ingest batch request:", {
-      endpoint: this.endpoint,
-      apiKey: this.apiKey ? "***" : undefined,
-      count: entries.length,
-      payload,
-    });
-  }
-}
-
-export default UpstreamSDK;
+export const upstream = new Upstream();
+export default Upstream;

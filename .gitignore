@@ -16,7 +16,6 @@ build/
 Thumbs.db
 
 # IDE
-.vscode/
 .idea/
 
 # Misc

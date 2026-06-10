@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "lint": "echo 'No lint configured'",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
