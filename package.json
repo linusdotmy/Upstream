@@ -1,6 +1,6 @@
 {
     "name": "upstream",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
     "packageManager": "npm@11.3.0",
     "workspaces": [
