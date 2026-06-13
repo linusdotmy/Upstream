@@ -1,16 +1,28 @@
 {
-  "name": "@upstream/sdk",
-  "version": "0.0.0",
-  "description": "Upstream open logging platform SDK",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "lint": "echo 'No lint configured'",
-    "typecheck": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name": "upstream-sdk",
+    "version": "0.0.1",
+    "description": "Simple and open logging for your projects",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "lint": "echo 'No lint configured'",
+        "typecheck": "tsc --noEmit"
+    },
+    "files": [
+        "dist/"
+    ],
+    "keywords": [
+        "upstream",
+        "logging",
+        "sdk",
+        "events",
+        "logs"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.19.42",
+        "typescript": "^5.0.0"
+    }
 }

@@ -13,11 +13,7 @@
             \$$
 ```
 
-## Simple and open logging for your next project.
-
-Try it today at https://up.linus.my.
-
-## Quick Start
+## Upstream - Quick Start
 
 1. Go to https://up.linus.my and register an API key for your project.
 2. Install ``upstream-sdk`` into your project.
@@ -29,29 +25,23 @@ npm i upstream-sdk
 ```ts
 import { Upstream } from 'upstream-sdk'
 
-const up = Upstream.init("YOUR_API_KEY")
+const up = new Upstream("YOUR_API_KEY")
 
-up.events.ingest(
-    {
-        title: "Project Deployed",
-        icon: "😁",
-        time: "10:10pm"
-    }
-);
+up.events.ingest({
+    title: "Project Deployed",
+    icon: "😁",
+});
 ```
 
 And your done! For API documentation, visit our [docs](https://docs.linus.my/upstream).
 
 ## Contributing
+We currently aren't accepting any outside contributions to the main app. However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
 
-We currently aren't accepting any outside contributions to Upstream Core (the app). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
-
-Contributions to the main ``upstream-sdk`` or marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md)
+Contributions to the sdk are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md).
 
 ## License
 
-The Upstream Marketing site & SDK are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
+The Upstream SDK is licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
-Upstream Core is currently closed source whilst we continue development. We may open source it in the future once it becomes stable, however we do not have any plans of doing that now.
-
-Built by [Linus Kang](https://linus.my).
+Built by [Linus Kang](https://github.com/linuskang).
