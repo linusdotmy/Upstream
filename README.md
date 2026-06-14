@@ -23,7 +23,7 @@
 
 I've been developing Upstream behind the scenes for the past few months and using it internally across my own applications, and felt that it's time to open it up to the community.
 
-Basically, Upstream is a easy way to integrate logging into your applications. It takes literally minutes to setup, you create a project, get an API key, and plug it into your project with ``upstream-sdk``.
+Basically, Upstream is a easy way to integrate logging into your applications. It takes literally minutes to setup. You signup, create a project and API key, and plug it into your project with ``upstream-sdk``.
 
 <img width="1361" height="1270" alt="image" src="https://github.com/user-attachments/assets/8fd5a222-9628-4159-a3a4-e3924df5552d" />
 
@@ -47,10 +47,10 @@ up.events.ingest({
 });
 ```
 
-And your done! For API documentation, visit our [docs](https://docs.linus.my/upstream).
+That's just scratching the surface. You can log complex events with json, events, descriptions, fields, and even add action buttons. For the full API, visit our [docs](https://docs.linus.my/upstream).
 
 ## Contributing
-We currently aren't accepting any outside contributions to the main app (Upstream Cloud is closed source). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
+We currently aren't accepting any outside contributions to the main app (Upstream Cloud is closed source. This may change in the future). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
 
 Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md).
 
