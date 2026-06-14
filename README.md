@@ -58,4 +58,4 @@ Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Be
 
 The Upstream SDK and marketing site are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
-Built by [Linus Kang](https://github.com/linuskang).
+Built by [Linus Kang](https://github.com/linuskang) with ❤️.
