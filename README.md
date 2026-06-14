@@ -23,6 +23,10 @@
 
 I've been developing Upstream behind the scenes for the past few months and using it internally across my own applications, and felt that it's time to open it up to the community.
 
+Basically, Upstream is a easy way to integrate logging into your applications. It takes literally minutes to setup, you create a project, get an API key, and plug it into your project with ``upstream-sdk``.
+
+<img width="1361" height="1270" alt="image" src="https://github.com/user-attachments/assets/8fd5a222-9628-4159-a3a4-e3924df5552d" />
+
 ## Quick Start
 
 1. Go to https://up.linus.my and register an API key for your project.
@@ -55,5 +59,3 @@ Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Be
 The Upstream SDK and marketing site are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
 Built by [Linus Kang](https://github.com/linuskang).
-
-<img width="1361" height="1270" alt="image" src="https://github.com/user-attachments/assets/8fd5a222-9628-4159-a3a4-e3924df5552d" />
