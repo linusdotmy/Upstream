@@ -45,3 +45,5 @@ Contributions to the sdk are welcome. Before contributing, we recommend you open
 The Upstream SDK is licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
 Built by [Linus Kang](https://github.com/linuskang).
+
+<img width="1361" height="1270" alt="image" src="https://github.com/user-attachments/assets/8fd5a222-9628-4159-a3a4-e3924df5552d" />
