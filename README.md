@@ -13,7 +13,17 @@
             \$$
 ```
 
-## Upstream - Quick Start
+![Upstream Cloud](https://img.shields.io/badge/upstream_cloud-v0.2.0-blue)
+![npm](https://img.shields.io/npm/v/upstream-sdk)
+![npm downloads](https://img.shields.io/npm/dm/upstream-sdk)
+![License](https://img.shields.io/badge/license-CC_BY_NC_4.0-red)
+[![Build](https://github.com/linusdotmy/upstream/actions/workflows/ci.yml/badge.svg)](https://github.com/linusdotmy/upstream/actions/workflows/ci.yml)
+
+## Upstream
+
+I've been developing Upstream behind the scenes for the past few months and using it internally across my own applications, and felt that it's time to open it up to the community.
+
+## Quick Start
 
 1. Go to https://up.linus.my and register an API key for your project.
 2. Install ``upstream-sdk`` into your project.
@@ -36,12 +46,12 @@ up.events.ingest({
 And your done! For API documentation, visit our [docs](https://docs.linus.my/upstream).
 
 ## Contributing
-We currently aren't accepting any outside contributions to the main app. However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
+We currently aren't accepting any outside contributions to the main app (Upstream Cloud is closed source). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
 
-Contributions to the sdk are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md).
+Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md).
 
 ## License
 
-The Upstream SDK is licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
+The Upstream SDK and marketing site are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
 Built by [Linus Kang](https://github.com/linuskang).
