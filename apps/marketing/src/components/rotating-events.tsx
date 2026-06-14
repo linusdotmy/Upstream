@@ -237,7 +237,9 @@ export function RotatingEvents() {
     const [leavingId, setLeavingId] = useState<string | null>(null)
 
     const itemsRef = useRef(items)
-    itemsRef.current = items
+    useEffect(() => {
+        itemsRef.current = items
+    }, [items])
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
     const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([])
 
