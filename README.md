@@ -52,7 +52,7 @@ That's just scratching the surface. You can log complex events with json, events
 ## Contributing
 We currently aren't accepting any outside contributions to the main app (Upstream Cloud is closed source. This may change in the future). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
 
-Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first, before opening PRs. More contributon information is available [here](CONTRIBUTING.md).
+Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Before contributing, we recommend you open a issue with what your trying to add first. More information is available [here](CONTRIBUTING.md).
 
 ## License
 
