@@ -4,6 +4,7 @@
     "private": true,
     "packageManager": "npm@11.3.0",
     "workspaces": [
+        "apps/*",
         "packages/*"
     ],
     "scripts": {
@@ -13,6 +14,7 @@
         "typecheck": "turbo run typecheck"
     },
     "devDependencies": {
+        "@types/react-syntax-highlighter": "^15.5.13",
         "turbo": "^2.9.17"
     }
 }
