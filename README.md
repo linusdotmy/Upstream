@@ -49,6 +49,10 @@ up.events.ingest({
 
 That's just scratching the surface. You can log complex events with json, events, descriptions, fields, and even add action buttons. For the full API, visit our [docs](https://docs.linus.my/upstream).
 
+## I want to self host Upstream!
+
+Upstream is currently closed source for the time being whilst I continue developing the product further, however I might consider publishing docker images for the community to selfhost at a later date.
+
 ## Contributing
 We currently aren't accepting any outside contributions to the main app (Upstream Cloud is closed source. This may change in the future). However, if you have any feature suggestions, feel free to open a issue and describe the thing you would like.
 
@@ -58,4 +62,4 @@ Contributions to the ``upstream-sdk`` or Upstream marketing site are welcome. Be
 
 The Upstream SDK and marketing site are licensed under **CC BY-NC 4.0**. See the [license](LICENSE) file for more details.
 
-Built by [Linus Kang](https://github.com/linuskang) with ❤️.
+Built with ❤️ by [Linus Kang](https://github.com/linuskang)

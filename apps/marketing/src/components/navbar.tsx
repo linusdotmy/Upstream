@@ -22,6 +22,9 @@ export function Navbar() {
                         <Link href="/docs">Docs</Link>
                     </Button>
                     <Button variant="ghost" size="sm" className="px-1.5 sm:px-2 text-[11px] sm:text-xs font-medium text-muted-foreground hover:text-foreground">
+                        <Link href="/blog">Blog</Link>
+                    </Button>
+                    <Button variant="ghost" size="sm" className="px-1.5 sm:px-2 text-[11px] sm:text-xs font-medium text-muted-foreground hover:text-foreground">
                         <Link target="_blank" href="https://github.com/linusdotmy/upstream">Github</Link>
                     </Button>
                     <Button size="sm" className="px-1.5 sm:px-2 text-[11px] sm:text-xs font-medium">
