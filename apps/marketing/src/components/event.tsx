@@ -24,6 +24,9 @@ import { useState, type ReactNode } from "react"
 import { Button } from "./ui/button"
 
 // Types
+export type Events = {
+    events: EventProps[]
+}
 
 export type EventProps = {
     title: string
@@ -46,7 +49,66 @@ export type EventProps = {
         type: "default" | "secondary" | "ghost"
         url: string
     }[]
-    onToggle?: (open: boolean) => void
+}
+
+function formatDate(dateStr: string) {
+    const [year, month, day] = dateStr.split("-").map(Number)
+    return new Date(year, month - 1, day).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    })
+}
+
+function getDayKey(date: Date) {
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, "0")
+    const day = String(date.getDate()).padStart(2, "0")
+    return `${year}-${month}-${day}`
+}
+
+export function EventsList({ events }: Events) {
+    const groups: { date: string; events: EventProps[] }[] = []
+
+    for (const event of events) {
+        const dayKey = getDayKey(new Date(event.createdAt))
+        const last = groups[groups.length - 1]
+        if (last && last.date === dayKey) {
+            last.events.push(event)
+        } else {
+            groups.push({ date: dayKey, events: [event] })
+        }
+    }
+
+    const hasMultipleDays = groups.length > 1
+
+    return (
+        <div className="flex flex-col gap-2">
+            {groups.map((group, groupIndex) => (
+                <div key={groupIndex} className="flex flex-col gap-2">
+                    {hasMultipleDays && (
+                        <p className="py-1 text-sm text-semibold text-muted-foreground">
+                            Events on {formatDate(group.date)}
+                        </p>
+                    )}
+                    {group.events.map((event, index) => (
+                        <Event
+                            key={index}
+                            title={event.title}
+                            icon={event.icon}
+                            createdAt={event.createdAt}
+                            content={event.content}
+                            category={event.category}
+                            fields={event.fields}
+                            events={event.events}
+                            data={event.data}
+                            actions={event.actions}
+                        />
+                    ))}
+                </div>
+            ))}
+        </div>
+    )
 }
 
 export function Event({
@@ -59,7 +121,6 @@ export function Event({
     events,
     data,
     actions,
-    onToggle,
 }: EventProps) {
     const [open, setOpen] = useState(false)
     const extras = Boolean(
@@ -77,18 +138,11 @@ export function Event({
         }
     }
 
-    const handleToggle = () => {
-        if (!extras) return
-        const next = !open
-        setOpen(next)
-        onToggle?.(next)
-    }
-
     return (
-        <Card className="mx-auto w-[400px] gap-0 bg-muted/40 p-3 ring-0">
+        <Card className="mx-auto w-full gap-0 bg-muted/40 p-3 ring-0">
             <CardHeader
                 className={`group flex flex-row items-center space-y-0 p-0 transition-opacity ${extras ? "cursor-pointer select-none hover:opacity-80" : ""}`}
-                onClick={handleToggle}
+                onClick={() => extras && setOpen(!open)}
             >
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-background text-2xl">
                     {icon}
@@ -114,6 +168,7 @@ export function Event({
                             </span>
                         )}
 
+                        {/* 2. Swapped <Button> for a simple <div> */}
                         {extras && (
                             <div className="ml-auto flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors group-hover:bg-muted group-hover:text-foreground">
                                 {open ? (

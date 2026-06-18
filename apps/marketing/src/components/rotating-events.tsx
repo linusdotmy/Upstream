@@ -290,10 +290,11 @@ export function RotatingEvents() {
         const onVisibilityChange = () => {
             if (document.visibilityState === "hidden") {
                 stop()
-            } else {
-                // A tick may have been interrupted while hidden, leaving an extra
-                // (5th) item that never got trimmed. Normalize back to a clean
-                // state before resuming so the stray row doesn't stick around.
+            } else if (!intervalRef.current) {
+                // Only restart if the interval was actually stopped (page was truly
+                // hidden). Mobile browsers can fire visibilitychange for non-visibility
+                // reasons (address bar, keyboard, etc.) — restarting on those would
+                // keep resetting the timer and prevent the carousel from moving.
                 setItems((prev) => prev.slice(0, VISIBLE_COUNT))
                 setEnteringId(null)
                 setLeavingId(null)
@@ -311,7 +312,7 @@ export function RotatingEvents() {
     }, [start, stop])
 
     return (
-        <div className="mx-auto w-[400px]">
+        <div className="mx-auto w-full max-w-[400px] px-2 sm:px-0">
             {items.map((item) => {
                 const collapsed = item.id === enteringId || item.id === leavingId
                 return (
