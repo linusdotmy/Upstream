@@ -19,7 +19,7 @@ export default function Home() {
 
                     <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                         <Button size="lg" className="w-full sm:w-auto gap-2 text-sm font-semibold">
-                            <Link href="/register">Create a free account</Link>
+                            <Link target="_blank" href="https://up.linus.my/register">Create a free account</Link>
                         </Button>
                         <Button
                             variant="ghost"

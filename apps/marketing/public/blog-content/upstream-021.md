@@ -14,6 +14,9 @@ Hello, here is this week's release notes:
 - New plan quotas (Free, Pro) for events & projects.
 - New PWA app supporting windows, mac, and android devices.
 - New v2 UI components
+- Request logs
+- Project audit logs
+
 
 ## Deprecations
 
