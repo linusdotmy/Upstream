@@ -50,7 +50,7 @@ export default function BlogPage() {
                     ) : (
                         posts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`}>
-                                <Card className="transition-colors hover:bg-muted/60">
+                                <Card className="transition-colors hover:bg-muted/60 mb-4">
                                     <CardHeader>
                                         <CardTitle className="text-base">{post.title}</CardTitle>
                                     </CardHeader>
