@@ -58,36 +58,10 @@ Your first event has been sent! View it on the Upstream dashboard. Those are the
 | `data`     | `unknown`         | No       | `{"subscriptionId":"sub_abc123"}` |
 | `actions`  | `Action[]`        | No       | `[{"title":"View Invoice","type":"default","url":"https://example.com"}]` |
 
-Too much? Don't worry, I've made a simple playground repository to show you the main logging concepts with ``upstream-sdk`` - at [linusdotmy/upstream-playground](https://github.com/linusdotmy/upstream-playground). The full API documentation is at https://docs.up.linus.my.
-
-## Plan structure
-
-Account plans haven't been fully decided yet, but as of now, there are 2 plans available to the public, explained below:
-
-### Free
-- Up to 1 project
-- Up to 50 events / month
-- Up to 7 days event retention
-- Up to 1 member
-- Community support
-
-### Pro ($29 AUD / month)
-- Up to 10 projects
-- Up to 10,000 events / month
-- Up to 90 days event retention
-- Up to 10 project members
-- Analytics
-- Event exporting
-- Webhooks
-- Audit logs
-- Email support
-
-This pricing structure isn't final and will most likely change in the future. *(psssst~ users who sign up during the beta now get the pro plan benefits for free during the beta, sign up!)*
-
 ## What's next?
 
 Upstream is currently still on beta undergoing heavy development, and most features are currently still being implemented. Stay tuned for updates!
 
-Have a feature suggestion? [Create an issue](https://github.com/linusdotmy/upstream/issues/new) on our Github repository and we'll take a look at it. The current project roadmap is at https://linus.my/go/up-roadmap.
+Have a feature suggestion? [Create an issue](https://github.com/linusdotmy/upstream/issues/new) on our Github repository and we'll take a look at it.
 
 *Happy logging! 🚀*

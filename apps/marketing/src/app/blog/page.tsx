@@ -38,11 +38,8 @@ export default function BlogPage() {
         <div className="flex min-h-screen flex-col">
             <div className="mx-auto w-full max-w-2xl px-4 pt-24 pb-16">
                 <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                    Blog
+                    Latest Updates
                 </h1>
-                <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-                    Updates, guides, and thoughts from the Upstream team.
-                </p>
 
                 <div className="mt-8 space-y-4">
                     {posts.length === 0 ? (
@@ -50,7 +47,7 @@ export default function BlogPage() {
                     ) : (
                         posts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`}>
-                                <Card className="transition-colors hover:bg-muted/60 mb-4">
+                                <Card className="transition-colors hover:bg-card/80 bg-card ring-0 mb-4">
                                     <CardHeader>
                                         <CardTitle className="text-base">{post.title}</CardTitle>
                                     </CardHeader>
