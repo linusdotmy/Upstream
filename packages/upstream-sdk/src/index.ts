@@ -7,8 +7,6 @@ export type {
     Action,
 } from './types';
 
-const DEFAULT_HOST = 'https://up.linus.my';
-
 type UpstreamOptions = {
     host?: string
 }
@@ -19,7 +17,7 @@ export class Upstream {
 
     constructor(apiKey: string, options?: UpstreamOptions) {
         this.apiKey = apiKey;
-        this.host = options?.host ?? DEFAULT_HOST;
+        this.host = options?.host ?? 'https://up.linus.my';
     }
 
     public events = {
