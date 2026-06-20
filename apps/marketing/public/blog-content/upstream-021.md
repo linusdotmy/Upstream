@@ -8,7 +8,7 @@ Hello, here is this week's release notes:
 
 ## New features
 
-- New of ``upstream-sdk``
+- New ``upstream-sdk``
 - New marketing page
 - New data retention API w/ cron jobs
 - New plan quotas (Free, Pro) for events & projects.
@@ -16,6 +16,8 @@ Hello, here is this week's release notes:
 - New v2 UI components
 - Request logs
 - Project audit logs
+- Analytics
+- Webhooks
 
 
 ## Deprecations
