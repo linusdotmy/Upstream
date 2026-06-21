@@ -6,8 +6,7 @@ declare module "react-syntax-highlighter" {
         style?: Record<string, React.CSSProperties>
         children: string
         className?: string
-        PreTag?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-        [key: string]: any
+        PreTag?: keyof JSX.IntrinsicElements | React.ComponentType<Record<string, unknown>>
     }
 
     export const Prism: React.FC<SyntaxHighlighterProps>

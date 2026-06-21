@@ -69,7 +69,7 @@ export default function Home() {
                 />
 
                 <p className="mx-auto max-w-lg text-base text-muted-foreground mt-5">
-                    In other words - a clunky workflow that doesn't scale well.
+                    In other words - a clunky workflow that doesn&apos;t scale well.
                 </p>
 
 

@@ -3,7 +3,7 @@ import path from "path"
 import matter from "gray-matter"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, Calendar } from "lucide-react"
+import { Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MarkdownRenderer } from "@/components/markdown-render"
 
