@@ -1,10 +1,5 @@
 <p align="center">
-  <img
-    src="https://github.com/user-attachments/assets/3a2d4d42-4b37-4a5d-8c6c-ee8b7d470ab3"
-    alt="Upstream Logo"
-    width="150"
-    height="150"
-  />
+  <img width="192" height="192" alt="192x192" src="https://github.com/user-attachments/assets/4c97f877-4fba-4146-885c-26f945bb6682" />
 </p>
 
 <h1 align="center">Upstream</h1>
