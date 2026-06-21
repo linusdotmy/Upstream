@@ -14,7 +14,7 @@
   </a>
 </p>
 
-This is a passion project I've been developing for the past few months, and usign it internally across my apps. I needed a simple logging platform that was quick to setup for new projects, had awesome logging capabilities, and beautiful UI. This is what I came up with.
+This is a passion project I've been developing for the past few months, and using it internally across my apps. I needed a simple logging platform that was quick to setup for new projects, had awesome logging capabilities, and beautiful UI. This is what I came up with.
 
 Basically, Upstream is a easy way to integrate logging into your own applications. It takes minutes to setup - you create a account, project, API key, and integrate it with your project using my SDK. Upstream is currently closed source for now. However, I might open source it in the future.
 
