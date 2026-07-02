@@ -22,7 +22,7 @@
     ],
     "license": "CC BY-NC 4.0",
     "devDependencies": {
-        "@types/node": "^20.19.42",
+        "@types/node": "^26.0.0",
         "typescript": "^5.0.0"
     }
 }
